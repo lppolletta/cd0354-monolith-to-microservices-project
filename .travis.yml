@@ -20,12 +20,12 @@ script:
 - docker build -t udagram-api-feed ./udagram-reverseproxy
 - docker tag udagram-api-feed lppolletta/udagram-api-feed:v1
 - docker tag udagram-api-feed lppolletta/udagram-api-user:v1
-- docker tag udagram-api-feed lppolletta/udagram-api-frontend:v1
-- docker tag udagram-api-feed lppolletta/udagram-api-reverseproxy:v1
+- docker tag udagram-api-feed lppolletta/udagram-frontend:v1
+- docker tag udagram-api-feed lppolletta/udagram-reverseproxy:v1
 
 after_success:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 - docker push lppolletta/udagram-api-feed:v1
 - docker push lppolletta/udagram-api-user:v1
-- docker push lppolletta/udagram-api-frontend:v1
-- docker push lppolletta/udagram-api-reverseproxy:v1
+- docker push lppolletta/udagram-frontend:v1
+- docker push lppolletta/udagram-reverseproxy:v1
