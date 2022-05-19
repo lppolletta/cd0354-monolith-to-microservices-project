@@ -24,7 +24,7 @@ script:
 - docker tag udagram-api-feed lppolletta/udagram-api-reverseproxy:v1
 
 after_success:
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 - docker push lppolletta/udagram-api-feed:v1
 - docker push lppolletta/udagram-api-user:v1
 - docker push lppolletta/udagram-api-frontend:v1
