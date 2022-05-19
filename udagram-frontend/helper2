@@ -1,0 +1,12 @@
+docker ps
+docker inspect container_name | grep IPAddress
+
+docker inspect cd0354-monolith-to-microservices-project_reverseproxy_1 | grep IPAddress
+docker inspect cd0354-monolith-to-microservices-project_frontend_1 | grep IPAddress
+
+
+npm cache clean --force
+
+npm config list
+
+npm install --global windows-build-tools --vs2015
