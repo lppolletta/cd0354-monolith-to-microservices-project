@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  POSTGRES_HOST: udacitylab.cluyel9qcqsq.us-east-1.rds.amazonaws.com
+  POSTGRES_DB: udacitylab
+  AWS_BUCKET: bucket-udacitylab
+  AWS_REGION: us-east-1
+  AWS_PROFILE: default
+  JWT_SECRET: hello
+  URL: http://localhost:8100
+metadata:
+  name: config-map
