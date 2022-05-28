@@ -3,7 +3,7 @@ services:
   reverseproxy:
     build:
       context: ./udagram-reverseproxy
-    image: lppolletta/udagram-reverseproxy
+    image: lppolletta/reverseproxy
   backend_user:
     build:
       context: ./udagram-api-user
@@ -15,4 +15,4 @@ services:
   frontend:
     build:
       context: ./udagram-frontend
-    image: lppolletta/udagram-frontend
+    image: lppolletta/udagram-frontend:local
